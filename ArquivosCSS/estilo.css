@@ -1,0 +1,326 @@
+/* Minimalist App-like CSS (inspirado no estilo do Notion)
+   Uso: cole este CSS no seu projeto e aplique as classes HTML correspondentes.
+   Este é um ponto de partida — ajuste cores, sombras e espaçamentos conforme preferir.
+*/
+:root {
+  --bg: #fafafa; /* fundo da página */
+  --surface: #ffffff; /* cards e superfícies */
+  --muted: #6b6b6b; /* texto secundário */
+  --text: #111111; /* texto principal */
+  --accent: #6b6ff0; /* cor de destaque (links, seleções) */
+  --border: rgba(16, 22, 26, 0.06);
+  --radius: 10px;
+  --gap: 16px;
+  --shadow: 0 4px 12px rgba(16, 22, 26, 0.08);
+  --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono",
+    "Courier New", monospace;
+  --ui: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial;
+}
+
+/* Reset simples */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: var(--ui);
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.popup-message {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  font-weight: 600;
+  z-index: 1000;
+}
+.popup-message.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#timer {
+  font-size: 5rem;           /* bem grande */
+  font-weight: 700;           /* mais chamativo */
+  text-align: center;
+  margin: 40px 0;             /* espaço acima e abaixo */
+  color: var(--accent);       /* cor de destaque */
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* centraliza horizontalmente */
+  gap: 16px;             /* espaço entre os botões */
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: var(--gap);
+}
+.button-grid button {
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.button-grid button:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+button {
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* Layout básico: sidebar + conteúdo */
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+.sidebar {
+  width: 280px;
+  background: transparent;
+  padding: 20px;
+  border-right: 1px solid var(--border);
+}
+.sidebar .logo {
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  margin-bottom: 12px;
+}
+.sidebar .nav-item {
+  padding: 8px 10px;
+  border-radius: 8px;
+  color: var(--muted);
+  cursor: pointer;
+}
+.sidebar .nav-item:hover {
+  background: rgba(0, 0, 0, 0.03);
+  color: var(--text);
+}
+
+.content {
+  flex: 1;
+  padding: 36px 48px;
+}
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Cabeçalho da página */
+.page-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.page-title {
+  font-size: 28px;
+  font-weight: 600;
+}
+.page-subtitle {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* Blocos (parágrafos, headings, listas) */
+.block {
+  padding: 8px 0;
+}
+.block p {
+  margin: 0;
+}
+
+.h1 {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 8px 0;
+}
+.h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 8px 0;
+}
+.h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 8px 0;
+}
+
+.quote {
+  border-left: 3px solid rgba(0, 0, 0, 0.08);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.01), transparent);
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: var(--muted);
+}
+
+.code {
+  font-family: var(--mono);
+  font-size: 13px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: linear-gradient(
+    180deg,
+    rgba(10, 10, 10, 0.02),
+    rgba(10, 10, 10, 0.01)
+  );
+  border: 1px solid var(--border);
+  overflow: auto;
+}
+
+.callout {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 12px 14px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: var(--shadow);
+}
+
+/* Tabela simples */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+}
+.table th,
+.table td {
+  padding: 10px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+.table th {
+  font-weight: 600;
+  color: var(--muted);
+}
+
+/* To-do / checkbox */
+.todo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.todo input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+}
+
+/* Link e estilos inline */
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Pequenos utilitários */
+.row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ações flutuantes em blocos */
+.block:hover .block-actions {
+  opacity: 1;
+  transform: translateX(0);
+}
+.block-actions {
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: all 0.12s ease;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .sidebar {
+    display: none;
+  }
+  .content {
+    padding: 20px;
+  }
+}
+
+/* seleção */
+::selection {
+  background: rgba(107, 111, 240, 0.18);
+}
+
+/* Bloco vazio */
+.empty {
+  min-height: 26px;
+  border-radius: 6px;
+  padding: 6px;
+}
+
+/* Inputs */
+.input {
+  font-size: 18px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: transparent;
+}
+
+/* Divisor */
+.divider {
+  height: 1px;
+  background: var(--border);
+  margin: 18px 0;
+  border-radius: 2px;
+}
+
+/* End of CSS */
