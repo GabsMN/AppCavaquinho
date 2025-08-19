@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acordes Maiores</title>
+    <link rel="stylesheet" href="../ArquivosCSS/estilo.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Acordes Maiores</h1>
+    </header>
+    <main>
+      <div class="select-row">
+        <div class="select-group">
+          <label for="nivel">Escolha o nível de Dificuldade:</label>
+          <select name="nivel" id="nivel">
+            <option value="facil">Fácil</option>
+            <option value="medio">Médio</option>
+            <option value="dificil">Difícil</option>
+          </select>
+        </div>
+        <div class="select-group">
+          <label for="tempo">Escolha o tempo de Troca:</label>
+          <select id="tempo">
+            <option value="8">8</option>
+            <option value="4">4</option>
+            <option value="2">2</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="acordeAtual"></div>
+      <div id="proximoAcorde"></div>
+      <img id="imagemAcorde" src="" alt="" />
+
+      <div id="timer-acorde">Tempo: 1</div>
+
+      <button onclick="iniciar()">Começar</button>
+      <button id="backButton" class="button">Voltar</button>
+    </main>
+    <script src="../ArquivosJS/scripts.js"></script>
+  </body>
+</html>
