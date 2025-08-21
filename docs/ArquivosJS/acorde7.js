@@ -6,13 +6,13 @@ let tempoSelecionado = 8;
 const backBtn = document.getElementById("backButton");
 
 const acordes7 = [
-  { nome: "Lá com 7ª", img: "../Imagens/acorde_La7.PNG" },
-  { nome: "Si com 7ª", img: "../Imagens/acorde_Si7.PNG" },
-  { nome: "Dó com 7ª", img: "../Imagens/acorde_Do7.PNG" },
-  { nome: "Ré com 7ª", img: "../Imagens/acorde_Re7.PNG" },
-  { nome: "Mi com 7ª", img: "../Imagens/acorde_Mi7.PNG" },
-  { nome: "Fá com 7ª", img: "../Imagens/acorde_Fa7.PNG" },
-  { nome: "Sol com 7ª", img: "../Imagens/acorde_Sol7.PNG" },
+  { nome: "Lá com 7ª", img: "./Imagens/acorde_La7.PNG" },
+  { nome: "Si com 7ª", img: "./Imagens/acorde_Si7.PNG" },
+  { nome: "Dó com 7ª", img: "./Imagens/acorde_Do7.PNG" },
+  { nome: "Ré com 7ª", img: "./Imagens/acorde_Re7.PNG" },
+  { nome: "Mi com 7ª", img: "./Imagens/acorde_Mi7.PNG" },
+  { nome: "Fá com 7ª", img: "./Imagens/acorde_Fa7.PNG" },
+  { nome: "Sol com 7ª", img: "./Imagens/acorde_Sol7.PNG" },
 ];
 
 function sortearAcorde() {
