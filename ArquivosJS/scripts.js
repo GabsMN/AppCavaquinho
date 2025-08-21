@@ -3,6 +3,7 @@ const digitacaoBtn = document.getElementById("btnDigitacao");
 const maiorBtn = document.getElementById("btnAcordeMaior");
 const menorBtn = document.getElementById("btnAcordeMenor");
 const acorde7Btn = document.getElementById("btnAcorde7");
+const trocaBtn = document.getElementById("btnTrocaAcorde");
 
 if (digitacaoBtn) {
   digitacaoBtn.addEventListener("click", () => {
@@ -25,5 +26,11 @@ if (menorBtn) {
 if (acorde7Btn) {
   acorde7Btn.addEventListener("click", () => {
     window.location.href = "acorde7.html";
+  });
+}
+
+if (trocaBtn) {
+  trocaBtn.addEventListener("click", () => {
+    window.location.href = "trocaAcordes.html";
   });
 }

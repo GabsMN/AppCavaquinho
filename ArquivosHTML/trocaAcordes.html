@@ -3,21 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AppCavaquinho/Acordes com 7ª</title>
+    <title>AppCavaquinho/Troca de acordes</title>
     <link rel="stylesheet" href="../ArquivosCSS/estilo.css" />
   </head>
   <body>
     <header>
-      <h1>Acordes com 7ª</h1>
+      <h1>Treino de troca de acordes</h1>
     </header>
     <main>
       <div class="select-row">
         <div class="select-group">
-          <label for="nivel">Escolha o nível de Dificuldade:</label>
-          <select name="nivel" id="nivel">
-            <option value="facil">Fácil</option>
-            <option value="medio">Médio</option>
-            <option value="dificil">Difícil</option>
+          <label for="padrao">Escolha o Padrão:</label>
+          <select name="padrao" id="padrao">
+            <option value="1">1º Padrão</option>
+            <option value="2">2º Padrão</option>
+            <option value="3">3º Padrão</option>
+            <option value="4">4º Padrão</option>
           </select>
         </div>
         <div class="select-group">
@@ -39,6 +40,6 @@
       <button onclick="iniciar()">Começar</button>
       <button id="backButton" class="button">Voltar</button>
     </main>
-    <script src="../ArquivosJS/acorde7.js"></script>
+    <script src="../ArquivosJS/trocaAcordes.js"></script>
   </body>
 </html>
