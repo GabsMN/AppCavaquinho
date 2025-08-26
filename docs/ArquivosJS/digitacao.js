@@ -1,4 +1,4 @@
-let duration = 15 * 60; // 15 minutos
+let duration = 10 * 60; // 10 minutos
 let remaining = duration;
 let interval = null;
 
