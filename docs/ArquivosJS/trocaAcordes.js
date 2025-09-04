@@ -6,31 +6,31 @@ let tempoSelecionado = 8;
 const backBtn = document.getElementById("backButton");
 
 const sequencia1 = [
-  { nome: "Dó", img: "./Imagens/acorde_Do.JPG" },
-  { nome: "Dó com 7ª", img: "./Imagens/acorde_Do7.PNG" },
-  { nome: "Fá", img: "./Imagens/acorde_Fa.JPG" },
-  { nome: "Fá Menor", img: "./Imagens/acorde_FaM.PNG" },
+  { nome: "Dó", img: "./Imagens/doMaior.png" },
+  { nome: "Dó com 7ª", img: "./Imagens/do7.png" },
+  { nome: "Fá", img: "./Imagens/faMaior.png" },
+  { nome: "Fá Menor", img: "./Imagens/faMenor.png" },
 ];
 
 const sequencia2 = [
-  { nome: "Ré", img: "./Imagens/acorde_Re.JPG" },
-  { nome: "Si menor", img: "./Imagens/acorde_SiM.PNG" },
-  { nome: "Mi menor", img: "./Imagens/acorde_MiM_P.PNG" },
-  { nome: "Lá com 7ª", img: "./Imagens/acorde_La7_P.JPG" },
+  { nome: "Ré", img: "./Imagens/reMaior.png" },
+  { nome: "Si menor", img: "./Imagens/siMenor.png" },
+  { nome: "Mi menor", img: "./Imagens/miMenorPadrao.png" },
+  { nome: "Lá com 7ª", img: "./Imagens/la7Padrao.png" },
 ];
 
 const sequencia3 = [
-  { nome: "Fá", img: "./Imagens/acorde_Fa.JPG" },
-  { nome: "Ré com 7ª", img: "./Imagens/acorde_Re7_P.JPG" },
-  { nome: "Sol menor", img: "./Imagens/acorde_SolM.PNG" },
-  { nome: "Dó com 7ª", img: "./Imagens/acorde_Do7_P.JPG" },
+  { nome: "Fá", img: "./Imagens/faMaior.png" },
+  { nome: "Ré com 7ª", img: "./Imagens/re7Padrao.png" },
+  { nome: "Sol menor", img: "./Imagens/solMenor.png" },
+  { nome: "Dó com 7ª", img: "./Imagens/do7Padrao.png" },
 ];
 
 const sequencia4 = [
-  { nome: "Lá", img: "./Imagens/acorde_La.JPG" },
-  { nome: "Lá com 7ª", img: "./Imagens/acorde_La7.PNG" },
-  { nome: "Ré", img: "./Imagens/acorde_Re.JPG" },
-  { nome: "Mi com 7ª", img: "./Imagens/acorde_Mi7_P.png" },
+  { nome: "Lá", img: "./Imagens/laMaior.png" },
+  { nome: "Lá com 7ª", img: "./Imagens/la7.png" },
+  { nome: "Ré", img: "./Imagens/reMaior.png" },
+  { nome: "Mi com 7ª", img: "./Imagens/mi7Padrao.png" },
 ];
 
 // Função auxiliar que retorna a sequência escolhida
