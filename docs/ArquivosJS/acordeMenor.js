@@ -6,13 +6,13 @@ let tempoSelecionado = 8;
 const backBtn = document.getElementById("backButton");
 
 const acordesMenores = [
-  { nome: "Lá Menor", img: "./Imagens/acorde_LaM.PNG" },
-  { nome: "Si Menor", img: "./Imagens/acorde_SiM.PNG" },
-  { nome: "Dó Menor", img: "./Imagens/acorde_DoM.PNG" },
-  { nome: "Ré Menor", img: "./Imagens/acorde_ReM.PNG" },
-  { nome: "Mi Menor", img: "./Imagens/acorde_MiM.PNG" },
-  { nome: "Fá Menor", img: "./Imagens/acorde_FaM.PNG" },
-  { nome: "Sol Menor", img: "./Imagens/acorde_SolM.PNG" },
+  { nome: "Lá Menor", img: "./Imagens/laMenor.png" },
+  { nome: "Si Menor", img: "./Imagens/siMenor.png" },
+  { nome: "Dó Menor", img: "./Imagens/doMenor.png" },
+  { nome: "Ré Menor", img: "./Imagens/reMenor.png" },
+  { nome: "Mi Menor", img: "./Imagens/miMenor.png" },
+  { nome: "Fá Menor", img: "./Imagens/faMenor.png" },
+  { nome: "Sol Menor", img: "./Imagens/solMenor.png" },
 ];
 
 function sortearAcorde() {
