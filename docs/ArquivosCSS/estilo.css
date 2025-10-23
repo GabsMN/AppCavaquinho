@@ -131,17 +131,20 @@ select option {
   margin-top: 40px;
 }
 
-#acordeAtual {
+#acordeAtual,
+#acordeAtual7 {
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 15px;
 }
-#proximoAcorde {
+#proximoAcorde,
+#proximoAcorde7 {
   font-size: 20px;
   color: gray;
   margin-bottom: 20px;
 }
-#imagemAcorde {
+#imagemAcorde,
+#imagemAcorde7 {
   max-width: 250px;
   margin: 10px auto;
   display: block;

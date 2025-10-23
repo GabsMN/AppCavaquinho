@@ -44,7 +44,7 @@ if (trocaBtn) {
 }
 
 if (prepBtn) {
-  trocaBtn.addEventListener("click", () => {
+  prepBtn.addEventListener("click", () => {
     window.location.href = "acordePrep.html";
   });
 }
